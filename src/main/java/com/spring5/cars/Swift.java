@@ -1,6 +1,7 @@
 package com.spring5.cars;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.spring5.interfaces.Car;
@@ -8,6 +9,7 @@ import com.spring5.interfaces.Engine;
 
 @Component("swift")
 public class Swift implements Car {
+	@Qualifier("v8")
 	@Autowired
 	Engine engine;
 	private String specs = "Swift";

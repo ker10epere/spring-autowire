@@ -1,6 +1,7 @@
 package com.spring5.cars;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,8 @@ import com.spring5.interfaces.Engine;
 @Component("corolla")
 public class Corolla implements Car {
 
-	@Autowired
+	@Qualifier("v6")
+	@Autowired(required = false)
 	Engine engine;
 	String specs = "Corolla";
 
