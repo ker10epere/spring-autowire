@@ -1,4 +1,4 @@
-package com.engines;
+package com.spring5.engines;
 
 import org.springframework.stereotype.Component;
 
